@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2016-01-15 07:59:00-0400
+date: 2024-03-21
 inline: true
 related_posts: false
 ---
 
-A simple inline announcement with Markdown emoji! :sparkles: :smile:
+Our paper "Bridging the Usability Gap: A Research Agenda for Enhancing Climate Information and Communication" was accepted to **<span style="color:#EB7F00">Sustaining Scalable Sustainability CHI 2024 workshop</span>**.
