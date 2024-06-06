@@ -8,7 +8,7 @@ nav_order: 3
 ---
 
 <div style="text-align: center; width: 100%;">
-  <iframe src="/assets/pdf/resume.pdf" id="cv"> </iframe>
+  <iframe src="/assets/pdf/resume_reynawu.pdf" id="cv"> </iframe>
 </div>
 
 <style>
