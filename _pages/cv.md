@@ -7,13 +7,6 @@ nav: true
 nav_order: 3
 ---
 
-<div style="text-align: center; width: 100%;">
+<div class="cv-frame">
   <iframe src="/assets/pdf/resume_2026.pdf" id="cv"> </iframe>
 </div>
-
-<style>
-#cv {
-  height: 100vh;
-    width: 100%;
-}
-</style>

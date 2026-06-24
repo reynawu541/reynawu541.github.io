@@ -1,0 +1,237 @@
+/*******************************************************************************
+ * Site-specific refinements for Siyi (Reyna) Wu.
+ ******************************************************************************/
+
+:root {
+  --global-bg-color: #f8f6f1;
+  --global-code-bg-color: rgba(111, 78, 55, 0.08);
+  --global-text-color: #24211d;
+  --global-text-color-light: #686058;
+  --global-theme-color: #8f3f31;
+  --global-hover-color: #6d2f25;
+  --global-hover-text-color: #fffdf8;
+  --global-footer-bg-color: #24211d;
+  --global-footer-text-color: #d9d1c5;
+  --global-footer-link-color: #fffdf8;
+  --global-distill-app-color: #686058;
+  --global-divider-color: rgba(36, 33, 29, 0.14);
+  --global-card-bg-color: #fffdf8;
+}
+
+html[data-theme="dark"] {
+  --global-bg-color: #191817;
+  --global-code-bg-color: rgba(202, 176, 143, 0.1);
+  --global-text-color: #efe8dc;
+  --global-text-color-light: #b9ad9d;
+  --global-theme-color: #d08f6d;
+  --global-hover-color: #efb58f;
+  --global-hover-text-color: #191817;
+  --global-footer-bg-color: #0f0e0d;
+  --global-footer-text-color: #b9ad9d;
+  --global-footer-link-color: #efe8dc;
+  --global-distill-app-color: #b9ad9d;
+  --global-divider-color: rgba(239, 232, 220, 0.16);
+  --global-card-bg-color: #23211f;
+}
+
+body {
+  font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+  background:
+    radial-gradient(circle at 12% 8%, rgba(143, 63, 49, 0.08), transparent 28rem),
+    linear-gradient(180deg, var(--global-bg-color) 0%, #fffdf8 52%, var(--global-bg-color) 100%);
+  line-height: 1.72;
+}
+
+html[data-theme="dark"] body {
+  background:
+    radial-gradient(circle at 12% 8%, rgba(208, 143, 109, 0.12), transparent 28rem),
+    linear-gradient(180deg, var(--global-bg-color) 0%, #1e1c1a 52%, var(--global-bg-color) 100%);
+}
+
+.navbar {
+  border-bottom: 1px solid var(--global-divider-color);
+  backdrop-filter: blur(16px);
+  background: rgba(248, 246, 241, 0.88) !important;
+  box-shadow: none;
+}
+
+html[data-theme="dark"] .navbar {
+  background: rgba(25, 24, 23, 0.88) !important;
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand {
+  letter-spacing: 0.02em;
+  text-transform: lowercase;
+}
+
+.navbar .nav-item.active > .nav-link {
+  color: var(--global-theme-color) !important;
+  font-weight: 600;
+}
+
+.post-header {
+  margin-bottom: 2.2rem;
+}
+
+.post-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.4rem, 5vw, 4.25rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.post-title .font-weight-bold {
+  font-weight: 500 !important;
+}
+
+.post article h2 {
+  margin-top: 2.5rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--global-divider-color);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.55rem;
+  font-weight: 400;
+}
+
+.about-page {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.about-page article {
+  position: relative;
+}
+
+.about-page article::before {
+  content: "";
+  position: absolute;
+  top: -1.6rem;
+  right: -4rem;
+  width: 16rem;
+  height: 16rem;
+  pointer-events: none;
+  opacity: 0.22;
+  background:
+    linear-gradient(120deg, transparent 0 44%, var(--global-theme-color) 44% 45%, transparent 45%),
+    linear-gradient(35deg, transparent 0 52%, var(--global-theme-color) 52% 53%, transparent 53%);
+  mask-image: radial-gradient(circle, #000 0 55%, transparent 72%);
+}
+
+.about-page .profile {
+  max-width: 245px;
+  margin-bottom: 1.25rem;
+}
+
+.about-page .profile img {
+  border-radius: 2px !important;
+  filter: saturate(0.92) contrast(1.02);
+}
+
+.about-page .profile figure {
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.about-page .profile figure::after {
+  content: "";
+  position: absolute;
+  inset: 0.7rem -0.7rem -0.7rem 0.7rem;
+  z-index: -1;
+  border: 1px solid var(--global-divider-color);
+  background: rgba(143, 63, 49, 0.04);
+}
+
+.reyna-kicker {
+  margin-bottom: 0.9rem;
+  color: var(--global-theme-color);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.reyna-lede {
+  max-width: 46rem;
+  margin-bottom: 1.25rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.28rem, 2.4vw, 1.72rem);
+  line-height: 1.45;
+}
+
+.reyna-focus {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 1.5rem 0 1.9rem;
+  padding: 0;
+  list-style: none;
+}
+
+.reyna-focus li {
+  border: 1px solid var(--global-divider-color);
+  border-radius: 999px;
+  padding: 0.32rem 0.72rem;
+  color: var(--global-text-color-light);
+  font-size: 0.82rem;
+  line-height: 1.3;
+  background: rgba(255, 253, 248, 0.62);
+}
+
+.reyna-statement {
+  margin-top: 1.1rem;
+  padding: 1.15rem 1.35rem;
+  border-left: 2px solid var(--global-theme-color);
+  background: rgba(255, 253, 248, 0.74);
+}
+
+html[data-theme="dark"] .reyna-focus li,
+html[data-theme="dark"] .reyna-statement {
+  background: rgba(35, 33, 31, 0.76);
+}
+
+.reyna-statement p:last-child {
+  margin-bottom: 0;
+}
+
+.publications ol.bibliography li {
+  padding-bottom: 1.4rem;
+  margin-bottom: 1.4rem;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+.publications .title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.08rem;
+  font-weight: 500;
+}
+
+.cv-frame {
+  width: 100%;
+}
+
+#cv {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  min-height: 78vh;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 2px;
+  background: var(--global-card-bg-color);
+}
+
+@media (max-width: 575.98px) {
+  .about-page .profile {
+    float: none !important;
+    max-width: 100%;
+    margin-right: 0;
+  }
+
+  .about-page article::before {
+    display: none;
+  }
+
+  .reyna-statement {
+    padding: 1rem;
+  }
+}
